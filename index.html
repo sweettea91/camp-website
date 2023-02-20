@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Marine Science Camp</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				background-color: rgb(243, 246, 243);
+				margin: 0;
+			}
+			video {
+				width: 100vw;
+  				height: 100vh;
+  				object-fit: cover;
+  				position: fixed;
+  				left: 0;
+  				right: 0;
+  				top: 0;
+  				bottom: 0;
+  				z-index: -1;
+  			}
+			.nav {
+				overflow: hidden;
+			}
+			.nav a {
+				float: left;
+				text-align: center;
+				font-size: 25px;
+				padding: 20px 20px;
+				text-decoration: none;
+				color: floralwhite;
+			}
+			.nav a:hover {
+				color: teal;
+			}
+			h1, h2 {
+				text-align: center;
+				font-family: Trecbuchet MS;
+				font-weight: bold;
+				color: floralwhite;
+			}
+			h1 {
+				font-size: 5.5rem;
+				margin-top: 40vh;
+			}
+			h2 {
+				font-size: 2rem;
+				padding-top: 150px;
+				padding-bottom: 500px;
+			}
+			.description p {
+				text-align: center;
+				font-size: 1.8rem;
+				padding: 50px;
+			}
+			table, th, td {
+				border: 1px solid;
+				height: 50px;
+			}
+			th {
+				color: teal;
+			}
+			.table caption {
+				padding-bottom: 25px;
+				color: floralwhite;
+			}
+			.table h3 {
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 2rem;
+				color: floralwhite;
+			}
+			table {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				background-color: floralwhite;
+				width: 90%;
+			}
+			tr:hover {
+				background-color: teal;
+			}
+			.staff {
+				width: 85%;
+				text-align: center;
+				padding: 50px;
+				margin: auto;
+			}
+			.staff h3 {
+				text-transform: uppercase;
+				font-size: 2rem;
+				padding-bottom: 25px;
+				color: floralwhite;
+			}
+			.box {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				background-color: floralwhite;
+				border: none
+			}
+			.photo img {
+			width: 500px;
+			height: 600px;
+			object-fit: cover;
+			object-position: center;
+			}
+			.bio {
+			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			font-size: 1.2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<video id="video" autoplay loop muted poster="baby-turtle.mp4">
+			<source src="images/baby-turtle.mp4" type="video/mp4">
+		</video>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<div class="nav">
+			<a href="registration.html"><i class="fa fa-fw fa-clipboard"></i> Enrollment</a>
+			<a href="mailto:sm101732@umconnect.umt.edu"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+		</div>
+		<div class="description">
+			<h1>Junior Marine Science Camp</h1>
+			<h2>An immersive experience in sea turtle conservation</h2>
+		</div>
+
+		<div class="table">
+			<h3>Marine Science Camp Information</h3>
+			<table>
+				<caption>2023 Summer Camp Schedule<br>1 week sessions from May - June</caption>
+				<thead>
+					<tr>
+					<!--headers in these rows-->
+						<th>Time</th>
+						<th>Monday</th>
+						<th>Tuesday</th>
+						<th>Wednesday</th>
+						<th>Thursday</th>
+						<th>Friday</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>8:30am - 9:30am</td>
+						<td colspan="5">Meet with Counselor/Turtle patrol</td>
+					</tr>
+					<tr>
+						<td>9:30am - 11am</td>
+						<td>tide pool<br>exploration</td>
+						<td>beach ecology</td>
+						<td>dissection</td>
+						<td>floating dock<br>ecology</td>
+						<td>salt marsh<br>exploration</td>
+					</tr>
+					<tr>
+						<td>11am - 12pm</td>
+						<td colspan="5">lunch</td>
+					</tr>
+					<tr>
+						<td>12:15pm - 1:15pm</td>
+						<td>water quality<br>testing</td>
+						<td rowspan="3">aquarium tour</td>
+						<td rowspan="2">boogie boarding/<br>surfing</td>
+						<td rowspan="3">Ranger tour of<br>State Park</td>
+						<td rowspan="2">beach day</td>
+					</tr>
+					<tr>
+						<td>1:15pm - 2pm</td>
+						<td>boogie boarding!</td>
+					</tr>
+					<tr>
+						<td>2pm - 3pm</td>
+						<td>turtle rehab</td>
+						<td>turtle rehab</td>
+						<td>turtle rehab</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="staff">
+			<h3>Meet the Counselors</h3>
+			<div class="box">
+				<section class="photo">
+					<img src="images/FB_IMG_1477192238039.jpg" alt="counselor photo">
+				</section>
+				<section class="bio">
+					<p>Hi! My name is Shailene and I am a Senior at the University of Montana. I love spending time exploring ocean life and can't wait for everything that this summer has in store.</p>
+					<p>One of my favorite camp memories is the turtle rehabilitation. It's great to be part of such a hands-on experience with the sea turtles.</p>
+				</section>
+			</div>
+
+			<div class="box">
+				<section class="photo">
+					<img src="images/20160603_113958.jpg" alt="counselor photo">
+				</section>
+				<section class="bio">
+					<p>Hi! my name is Zach and I am so excited for this summer. I have always had a passion for working with animals. I previously worked at the Zoo with baboons, elephants, tigers, and tortoises before moving here. I can't wait to work with the sea turtles and share my knowledge of marine biology.</p>
+				</section>
+			</div>
+
+			<div class="box">
+				<section class="photo">
+					<img src="images/parks-and-rec.jpg" alt="counselor photo">
+				</section>
+				<section class="bio">
+					<p>Hi! my name is Leslie Knope and I Currently work for the local Parks and Rec. I love to spend my summers volunteering as a camp counselor and help local youth expand their knowledge of marine biology. I have a dedication to environmental education and I am extremely excited for this summer. I can't wait to meet everyone!</p>
+				</section>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Camp Registration</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				background-color: rgb(243, 246, 243);
+				font-family: sans-serif;
+			}
+			ol {
+				list-style: none;
+			}
+			ul {
+				list-style: none;
+			}
+			h1 {
+				font-family: cursive;
+				font-size: 3rem;
+				text-align: center;
+				font-weight: 100;
+				text-transform: uppercase;
+				margin-top: 25px;
+			}
+			fieldset {
+				padding: 1rem;
+				margin-top: 1.5rem;
+			}
+			legend {
+				font-size: 30px;
+			}
+			.camper-info li {
+				padding-bottom: .25rem;
+			}
+			.camper-info p {
+				padding-top: .8rem;
+				padding-bottom: .5rem;
+			}
+			.get-to-know p {
+				padding-bottom: .8rem;
+			}
+			.registration-form {
+				margin-left: auto;
+				margin-right: auto;
+				background-color: #FFFFFF;
+				width: 1000px;
+				font-size: 20px;
+			}
+			.photo-upload p {
+				padding-top: 2rem;
+				padding-bottom: .5rem;
+			}
+			.buttons {
+				text-align: center;
+				padding-top: 5rem;
+				padding-bottom: 2rem;
+			}
+			.home-link {
+				text-align: center;
+				padding-top: 5rem;
+				padding-bottom: 2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="registration-form">
+			<h1>Register for Camp</h1>
+			<form action="/registration.php" method="POST">
+				<fieldset class="camper-info">
+					<legend>Enter Camper's information below</legend>
+
+					<ol>
+						<li><label>First Name: </label>
+							<input type="text" name="firstname"></li>
+						<li><label>Last Name: </label>
+							<input type="text" name="lastname"></li>
+						<li><label>Age: </label>
+							<select name="age">
+								<option>8 - 9 years</option>
+								<option>10 - 12 years</option>
+								<option>13 - 15 years</option>
+								<option>16 - 18 years</option>
+							</select></li>
+						<li><label>Phone Number: </label>
+							<input type="tel" name="phonenumber"></li>
+						<li><label>Allergies: </label><br>
+							<textarea name="allergy-list" placeholder="Please list any allergies we should be aware of" rows="5" cols="40"></textarea></li>
+					</ol>
+
+					<p>T-shirt Size:</p>
+					<ol>
+						<li><input type="radio" name="size" value="small" checked>Small</li>
+						<li><input type="radio" name="size" value="medium">Medium</li>
+						<li><input type="radio" name="size" value="large">Large</li>
+					</ol>
+				</fieldset>
+
+				<fieldset class="session">
+					<legend>Choose a session</legend>
+					<label>Choose a week in May or June: </label>
+					<input type="week" name="week" min="2023-W18" max="2023-W26">
+				</fieldset>
+
+				<fieldset class="get-to-know">
+					<legend>Help us get to know you</legend>
+
+					<p>What's your favorite camp activities?</p>
+					<ul>
+						<li><input type="checkbox" name="activities" value="turtle">Turtle Patrol</li>
+						<li><input type="checkbox" name="activities" value="TPE">Tide Pool Exploration</li>
+						<li><input type="checkbox" name="activities" value="beach-eco">Beach Ecology</li>
+						<li><input type="checkbox" name="activities" value="disect">Dissection</li>
+						<li><input type="checkbox" name="activities" value="dock-eco">Floating Dock Ecology</li>
+						<li><input type="checkbox" name="activities" value="salt-marsh">Salt Marsh Exploration</li>
+						<li><input type="checkbox" name="activities" value="water-test">Water Quality Testing</li>
+						<li><input type="checkbox" name="activities" value="boogie">Boogie Boarding</li>
+						<li><input type="checkbox" name="activities" value="rehab">Turtle Rehab</li>
+						<li><input type="checkbox" name="activities" value="aquarium">Aquarium Tour</li>
+						<li><input type="checkbox" name="activities" value="ranger">Ranger Tour</li>
+						<li><input type="checkbox" name="activities" value="beach-day">Beach Day</li>
+					</ul>
+				</fieldset>
+
+				<div class="photo-upload">
+					<form action="/client.php" method="POST" enctype="multipart/form-data">
+						<p>Upload a photo to be used for your name badge</p>
+						<input type="file" name="photo">
+					</form>
+				</div>
+
+				<div class="buttons">
+					<button type="button" onclick="register()">Register</button> 
+					<button type="button" onclick="reset()">Reset</button>
+					<p id="message"> </p>
+				</div>
+				
+			</form>
+		</section>
+
+		<section class="home-link">
+			<p><a href="index.html">Back to Home</a></p>
+		</section>
+
+		<script type="text/javascript">
+			function register() {
+				document.getElementById('message').innerHTML = 'Thank you for registering!';
+			}
+			function reset() {
+				document.getElementById('message').innerHTML = ''
+			}
+		</script>
+	</body>
+</html>
